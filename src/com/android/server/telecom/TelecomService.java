@@ -181,7 +181,6 @@ public class TelecomService extends Service {
      * TODO: Reorganize this inner class to top of file.
      */
     class TelecomServiceImpl extends ITelecomService.Stub {
-        @Override
         public PhoneAccountHandle getDefaultOutgoingPhoneAccount(String uriScheme) {
             enforceReadPermission();
             long token = Binder.clearCallingIdentity();
@@ -712,10 +711,8 @@ public class TelecomService extends Service {
             }
         }
 
-        @Override
         public int getActiveSubscription() { return 0; }
 
-        @Override
         public void switchToOtherActiveSub(int subId) { }
 
         /**
